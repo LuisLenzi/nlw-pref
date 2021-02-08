@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Localização | Cadastrar</title>
+    <link rel="icon" href="/images/loco-icon.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/locations.css">
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/map.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin="">
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="locations">
+        <aside class="animate-right sidebar">
+            <img src="/images/bg.svg" alt="Localização" width="150px" height="150px">
+            <footer>
+                <button onclick="history.back()">
+                    <img src="/images/arrow-back.svg" alt="Voltar">
+                </button>
+            </footer>
+        </aside>
+        <main class="animate-appear with-sidebar">
+            <div class="location-details">
+                <img src="/images/img (1).jpeg" alt="Prefeitura Municipal de Monsenhor Paulo">
+                <div class="images">
+                    <button onclick="selectImage(event)" class="active" type="button">
+                        <img src="/images/img (2).jpeg" alt="Perspectiva 01">
+                    </button>
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="/images/img (3).jpeg" alt="Perspectiva 02">
+                    </button>
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="/images/img (4).jpeg" alt="Perspectiva 03">
+                    </button>
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="/images/img (5).jpeg" alt="Perspectiva 04">
+                    </button>
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="/images/img (6).jpeg" alt="Perspectiva 05">
+                    </button>
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="/images/img (1).jpeg" alt="Perspectiva 06">
+                    </button>
+                </div>
+                <div class="location-details-content">
+                    <h1>Prefeitura Municipal de Monsenhor Paulo</h1>
+                    <h3>CNPJ - 22.541.874/0001-99</h3>
+                    <p>Rua José Américo, Nº 525 - Centro</p>
+                    <p>Área do terreno: 250,00 m² | Área construída: 185,00 m²</p>
+                    <p>Alvará de Construção: 14/2012 | Habite-se: 27/2020</p>
+                    <div class="map-container">
+                        <div id="mapid"></div>
+                        <footer>
+                            <a href="">Ver rotas no Google Maps</a>
+                        </footer>
+                    </div>
+                    <hr>
+                    <h2>Informações adicionais</h2>
+                    <p>Essa é uma construção pública de propriedade do Município em questão.</p>
+                    <div class="more-details">
+                        <div class="construction-start-date">
+                            <img src="/images/clock.svg" alt="Data inicial da construção" width="75px" height="75px">
+                            Data inicial da construção
+                            14/07/2012
+                        </div>
+                        <div class="final-construction-date">
+                            <img src="/images/info.svg" alt="Data final da construção" width="75px" height="75px">
+                            Data final da construção
+                            21/05/2020
+                        </div>
+                    </div>
+                    <button type="button" class="primary-button">
+                        <img src="/images/whatsapp.svg" alt="Chamar no whatsapp">
+                        Entrar em contato com o proprietário
+                    </button>    
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="/scripts/locations.js"></script>
+</body>
+</html>

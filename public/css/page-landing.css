@@ -1,0 +1,93 @@
+/* CSS - Página Inicial [MOBILE FIRST]*/
+#page-landing {
+    background: linear-gradient(329.54deg, #043d63 0%, #53ccd4 100%);
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+}
+
+#container {
+    margin: auto;
+    width: min(90%, 112rem);
+}
+
+
+#logo {
+    animation-delay: 50ms;
+}
+
+.location {
+    animation-delay: 100ms;
+}
+
+main h1 {
+    animation-delay: 150ms;
+}
+
+.location, h1, .management p {
+    height: 16vh;
+}
+
+.management a {
+    outline: none;
+    width: 10rem;
+    height:10rem;
+    background: white;
+    border: none;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transition: background 800ms;
+    animation-delay: 250ms;
+}
+
+.management p {
+    animation-delay: 200ms;
+}
+
+.management a:hover {
+    background: #ff8f0f;
+}
+
+/* CSS - Página Inicial [DESKTOP VERSION]*/
+@media (min-width: 760px) {
+    #container{
+        background: url("../images/bg.svg") no-repeat 80% / clamp(20rem, 45vw, 55rem);
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .location, h1, .management p {
+        height: initial;
+        text-align: initial;
+    }
+    .location {
+        font-size: 2rem;
+        line-height: 1.5;
+        text-align: right;
+    }
+    main h1 {
+        font-size: clamp(6rem, 10vw, 6rem);
+        font-weight: 600;
+        line-height: .85;
+        margin: clamp(4%, 8vh, 7%) 0 3rem;
+        width: min(450px, 80%);
+    }
+    .management {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .management p {
+        font-size: 2rem;
+        line-height: 1.5;
+        width: clamp(25rem, 25vw, 35rem);
+    }
+    .management a {
+        margin: initial;
+    }
+}

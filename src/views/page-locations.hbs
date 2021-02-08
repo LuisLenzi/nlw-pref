@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizações | Mapa</title>
+    <link rel="icon" href="/images/loco-icon.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/page-locations.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin="">
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="page-locations">
+        <aside class="animate-right">
+            <header>
+                <img src="/images/map-marker.svg" alt="Localização" width="100px" height="100px">
+                <h2>Selecione um local no mapa</h2>
+                <p>Cadastre diversas construções</p>
+            </header>
+            <footer>
+                <strong>Monsenhor Paulo</strong>
+                <p>Minas Gerais</p>
+            </footer>
+        </aside>
+        <div id="mapid" class="animate-appear"></div>
+        <a href="/create-locations" class="create-locations" title="Cadastre um local">
+            <img src="/images/plus.svg" alt="Cadastrar localização">
+        </a>
+    </div>
+
+    <script src="/scripts/page-locations.js"></script>
+</body>
+</html>

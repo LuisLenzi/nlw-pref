@@ -1,0 +1,111 @@
+form {
+    width: 80rem;
+    margin: 6.5rem auto;
+    background: white;
+    border: .1rem solid #9dc6e2;
+    border-radius: 2rem;
+    padding: 8rem;
+    overflow: hidden;
+}
+fieldset {
+    border: 0;
+}
+fieldset + fieldset {
+    margin-top: 8rem;
+}
+fieldset legend {
+    width: 100%;
+    color: #043d63;
+    font: 600 3.5rem/1 'Montserrat', sans-serif;
+    border-bottom: 1px solid #d3e2e5;
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+}
+.input-block + .input-block {
+    margin-top: 2.5rem;
+}
+.input-block label {
+    margin-bottom: 1rem;
+    color: #043d63;
+    font: 600 1.5rem/3 'Montserrat', sans-serif;
+    padding-left: 1.5rem;
+}
+.input-block-areas label {
+    margin-bottom: 1rem;
+    color: #043d63;
+    font: 600 1.5rem/3 'Montserrat', sans-serif;
+    padding-left: 1.5rem;
+}
+.input-block input,
+.input-block textarea {
+    width: 100%;
+    background: #ebf9ff;
+    border: 1px solid #e0f6ff;
+    padding-left: 4rem;
+    border-radius: 2rem;
+    color: #043d63;
+    outline: 0;
+    font: 500 1.5rem/1 'Montserrat', sans-serif;
+}
+.input-block input:focus,
+.input-block textarea:focus {
+    border: 2px solid #043d63;
+}
+.input-block input:valid,
+.input-block textarea:valid {
+    background: #edfffd;
+}
+.input-block input {
+    height: 5.5rem;
+    padding: 0 1.5rem;
+}
+.input-block textarea {
+    height: clamp(12rem, 16rem, 24rem);
+    resize: none;
+    padding: 1.5rem;
+    line-height: 2.5rem;
+}
+input:-webkit-autofill {
+    -webkit-text-fill-color: #043d63;
+}
+.input-block.images button {
+    width: 15%;
+    height: 8rem;
+    padding: 0 1.5rem;
+    margin-top: 3rem;
+    background: #9dc6e2;
+    border: 1px solid #e0f6ff;
+    border-radius: 2rem;
+    outline: 0;
+    cursor: pointer;
+    transition: background 800ms;
+}
+.input-block.images button:hover {
+    background: #043d63;
+}
+.new-upload {
+    position: relative;
+}
+.new-upload + .new-upload {
+    margin-top: 2.4rem;
+}
+.new-upload span {
+    display: flex;
+    position: absolute;
+    right: 1.5rem;
+    bottom: .6rem;
+    background: #9dc6e2;
+    border: 1px solid #e0f6ff;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    padding: .8rem;
+    cursor: pointer;
+    outline: none;
+    transition: background 800ms;
+}
+.new-upload span:hover {
+    background: #043d63;
+}
+.new-upload span .plus{
+    transform: rotate(45deg);
+}

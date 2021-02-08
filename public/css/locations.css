@@ -1,0 +1,109 @@
+#locations {
+    display: flex;
+    height: 100vh;
+}
+main {
+    flex: 1;
+}
+.location-details {
+    width: 80rem;
+    margin: 6.5rem auto;
+    background: white;
+    border: .1rem solid #9dc6e2;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.location-details > img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+.location-details-content {
+    padding: 1rem 8rem;
+}
+.location-details-content h1 {
+    color: #043d63;
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+.location-details-content h3 {
+    color: #043d63;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 5rem;
+}
+.location-details-content p {
+    font: 600 1.75rem/1 'Montserrat', sans-serif;
+    color: #307eb3;
+    line-height: 1;
+    margin-top: 1rem;
+}
+.images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 1.5rem;
+    margin: 9rem 4rem;
+}
+.images button {
+    outline: none;
+    border: 0;
+    background: none;
+    height: 8.8rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    overflow: hidden;
+    opacity: 0.7;
+    transition: opacity 800ms;
+}
+.images button:hover,
+.images button.active {
+    opacity: 1;
+}
+.images button img{
+    width: 100%;
+    height: 8.8rem;
+    object-fit: cover;
+}
+.location-details-content hr {
+    width: 100%;
+    height: .1rem;
+    border: 0;
+    background: #d3e2e6;
+    margin: 6.5rem 0;
+}
+.location-details-content h2 {
+    font-size: 3.5rem;
+    line-height: 1rem;
+    color: #043d63;
+    margin-bottom: 4rem;
+}
+.more-details {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+}
+.more-details div {
+    padding: 3.5rem 2.5rem;
+}
+.more-details img {
+    display: block;
+    margin-bottom: 2.5rem;
+}
+.more-details .construction-start-date {
+    color: #53ccd4;
+    font: 600 1.5rem/1 'Montserrat', sans-serif;
+    background: linear-gradient(149.97deg, #dff5fa 8.13%, #FFFFFF 92.67%);
+    border: .1rem solid #B3DAE2;
+    box-sizing: border-box;
+    border-radius: 2rem;
+}
+.more-details .final-construction-date {
+    color: #ff8f0f;
+    font: 600 1.5rem/1 'Montserrat', sans-serif;
+    background: linear-gradient(149.97deg, #ffe8e2 8.13%, #FFFFFF 92.67%);
+    border: .1rem solid #ffbd72;
+    box-sizing: border-box;
+    border-radius: 2rem;
+}

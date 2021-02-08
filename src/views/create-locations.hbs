@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Localização | Cadastrar</title>
+    <link rel="icon" href="/images/loco-icon.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/map.css">
+    <link rel="stylesheet" href="/css/create-locations.css">
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin="">
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="create-locations">
+        <aside class="animate-right sidebar">
+            <img src="/images/bg.svg" alt="Localização" width="150px" height="150px">
+            <footer>
+                <button onclick="history.back()">
+                    <img src="/images/arrow-back.svg" alt="Voltar">
+                </button>
+            </footer>
+        </aside>
+        <main class="animate-appear with-sidebar">
+            <form action="">
+                <fieldset>
+                    <legend>Informações</legend>
+                    <div class="map-container">
+                        <div id="mapid"></div>
+                        <input type="hidden" name="lat">
+                        <input type="hidden" name="lng">
+                        <footer>
+                            <a href="#" id="select-point">Clique no mapa para adicionar a localização</a>
+                        </footer>
+                    </div>
+                    <div class="input-block">
+                        <label for="name">Nome do proprietário</label>
+                        <input id="name" autocomplete="off" name="name" type="text" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="pfpj">CPF ou CNPJ</label>
+                        <input id="pfpj" autocomplete="off" name="pfpj" type="text" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="adress">Endereço da obra</label>
+                        <input id="adress" autocomplete="off" name="adress" type="text" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="terren-area">Área do Terreno</label>
+                        <input id="terren-area" autocomplete="off" name="terren-area" type="text" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="construction-area">Área Construída</label>
+                        <input id="construction-area" autocomplete="off" name="construction-area" type="text" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="construction-start-date">Data inicial da construção</label>
+                        <input id="construction-start-date" autocomplete="off" name="construction-start-date" type="text" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="final-construction-date">Data final da construção</label>
+                        <input id="final-construction-date" autocomplete="off" name="final-construction-date" type="text" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="description">Descrições e complementos da obra</label>
+                        <textarea id="description" autocomplete="off" name="description" type="text" required></textarea>
+                    </div>
+                    <div class="input-block images">
+                        <label for="images">Fotos</label>
+                        <div class="images-upload" id="images">
+                            <div class="new-upload">
+                                <input name="images" autocomplete="off" placeholder="Realize o upload ou cole o link da imagem aqui" required>
+                                <span onclick="deleteField(event)">
+                                    <img src="/images/plus.svg" alt="Remover link" class="plus">
+                                </span>
+                            </div>
+                        </div>
+                        <button type="button" onclick="addPhotoField()">
+                            <img src="/images/plus.svg" alt="Adicionar imagens">
+                        </button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Referências</legend>
+                    <div class="input-block">
+                        <label for="instructions">Instruções para localização</label>
+                        <textarea name="instructions" id="instructions" required></textarea>
+                    </div>
+                    <button type="submit" class="primary-button">Confirmar</button>
+                </fieldset>
+            </form>
+        </main>
+
+    </div>
+
+    <script src="/scripts/create-locations.js"></script>
+</body>
+</html>
